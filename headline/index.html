@@ -16,6 +16,7 @@
             function (data) {
                 console.log(data);
                 var jsonData = eval("(" + data + ")");
+                console.log(jsonData);
                 jsonData.article.each(function(paraData) {
                     var p = $("<p></p>");
                     paraData.each(function(elementData) {
