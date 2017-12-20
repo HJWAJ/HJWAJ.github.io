@@ -12,11 +12,9 @@
 <script>
     $(function () {
         //$.ajax("http://10.76.177.224:4080/invoke.json?url=http://service.dianping.com/search/queryAnnotationService&method=getAnnotationInfo&parameterTypes=com.dp.search.kqu.model.QueryRequestInfo&parameters={%22cityID%22:1,%22needRewrite%22:true,%22keyword%22:%22%E6%92%A9%E6%B1%A4%22,%22needQCA%22:%22true%22}", {
-        $.get("json.html",{}, 
+        $.get("json.html?" + getKeyword(),{}, 
             function (data) {
-                console.log(data);
                 var jsonData = eval("(" + data + ")");
-                console.log(jsonData);
                 jsonData.article.forEach(function(paraData) {
                     var p = $("<p></p>");
                     paraData.forEach(function(elementData) {
@@ -48,6 +46,10 @@
             img.attr("height", elementData.height);
         }
         return img;
+    }
+
+    function getKeyword() {
+        return window.location.search.substr(1).split("=")[1];
     }
 </script>
 </html>
