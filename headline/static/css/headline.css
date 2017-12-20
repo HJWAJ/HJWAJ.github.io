@@ -5,5 +5,33 @@
 
 .candidate {
     background-color: white;
-    border: #999 thin solid;
+    border: #ccc thin solid;
+    margin: 10px 10px 0px 0px;
+}
+
+.suggest {
+    background-color: #ececec; 
+    margin: 0
+}
+
+form {
+    background-color: white;
+}
+
+.search-box {
+    outline: none;
+    border: none;
+    padding: 4px 10px 4px 10px;
+    background-color: #ececec;
+    border-radius: 20px;
+    width: calc(100% - px);
+}
+
+.submit {
+    border: none;
+    color: #f63;
+    font-size: 1em;
+    vertical-align: middle;
+    padding: 0 0 0 5px;
+    background-color: white;
 }
