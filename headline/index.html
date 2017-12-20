@@ -10,11 +10,12 @@
 </body>
 <script>
     $(function () {
-        $.get("https://www.baidu.com", {},
-            function (jsonData) {
-                $("body").append(jsonData);
+        $.get("https://www.baidu.com", {
+            dataType: 'jsonp',
+            success: function (data) {
+                $("body").append(data);
             }
-        );
+        });
     });
 </script>
 </html>
