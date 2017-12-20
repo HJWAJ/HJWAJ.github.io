@@ -17,9 +17,9 @@
                 console.log(data);
                 var jsonData = eval("(" + data + ")");
                 console.log(jsonData);
-                jsonData.article.each(function(paraData) {
+                jsonData.article.forEach(function(paraData) {
                     var p = $("<p></p>");
-                    paraData.each(function(elementData) {
+                    paraData.forEach(function(elementData) {
                         switch (elementData.type) {
                             case "text":
                                 p.append(genTextElement(elementData));
