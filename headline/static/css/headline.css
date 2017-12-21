@@ -7,6 +7,9 @@
     background-color: white;
     border: #ccc thin solid;
     margin: 10px 10px 0px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .suggest {
